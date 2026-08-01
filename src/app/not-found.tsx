@@ -1,0 +1,4 @@
+import Link from "next/link";
+import { Container } from "@/components/container";
+import { ArrowRightIcon, GraphIcon } from "@/components/icons";
+export default function NotFound() { return <Container className="py-28 text-center"><div className="mx-auto flex size-14 items-center justify-center rounded-2xl bg-indigo-500/10 text-indigo-500"><GraphIcon className="size-7" /></div><p className="eyebrow mt-8">404 · Node not found</p><h1 className="mt-4 text-4xl font-semibold tracking-[-.04em] text-[var(--text-strong)] sm:text-5xl">This path is not in the graph.</h1><p className="mx-auto mt-5 max-w-xl text-lg leading-8 text-[var(--text-muted)]">The page may have moved, or the requested route was never connected.</p><Link href="/" className="button-primary mt-8">Return home<ArrowRightIcon className="size-4" /></Link></Container>; }
