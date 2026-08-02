@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Container } from "@/components/container";
 import { CheckIcon, GraphIcon } from "@/components/icons";
+import { siteConfig as site } from "@/config/site";
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = pageMetadata(
@@ -46,7 +47,7 @@ export default function RoadmapPage() {
       <div className="mt-12 grid gap-6 lg:grid-cols-2">
         <RoadmapColumn
           eyebrow="Available"
-          title="Version 0.3.0"
+          title={`Version ${site.version}`}
           items={available}
           icon={<CheckIcon />}
           iconClassName="bg-emerald-500/10 text-emerald-500"

@@ -52,7 +52,7 @@ export default function ChangelogPage() {
           TokenOptiPy {site.version}
         </h1>
         <p className="mt-6 text-lg leading-8 text-[var(--text-muted)]">
-          The current repository identifies version 0.3.0. This page summarizes confirmed capabilities rather than reconstructing undocumented release dates.
+          The core project identifies version {site.version}. This page summarizes confirmed capabilities rather than reconstructing undocumented release dates.
         </p>
       </div>
 

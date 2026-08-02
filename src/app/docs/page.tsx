@@ -12,7 +12,7 @@ const toc = [{ id: "what-it-does", label: "What it does" }, { id: "outputs", lab
 export default function DocsPage() {
   return <DocPage href="/docs" title="TokenOptiPy documentation" description="A local TokenGraph engine for inspecting token-bearing content and the model calls that consume it." toc={toc}>
     <h2 id="what-it-does">What it does</h2>
-    <p>TokenOptiPy scans a project locally and builds a graph that connects files, prompts, variables, contexts, functions, and model calls. The graph helps identify token-heavy inputs and understand how content may flow through a Python LLM application.</p>
+    <p>TokenOptiPy scans a project locally and connects token-bearing content, functions, context, and model calls across supported LLM application languages.</p>
     <div className="note"><strong>Current release:</strong> TokenOptiPy {site.version}. The project is marked alpha and requires Python 3.10 or newer.</div>
     <CodeBlock code={`${site.installCommand}\n${site.commands.build}`} />
     <h2 id="outputs">Generated outputs</h2>
@@ -21,7 +21,7 @@ export default function DocsPage() {
     <p>Use the HTML report for exploration, JSON for tooling, and Markdown for review or version-controlled engineering notes.</p>
     <h2 id="supported-inputs">Supported inputs</h2>
     <ul><li>Python source files (<code>.py</code>).</li><li>Prompt and text resources (<code>.txt</code>, <code>.prompt</code>, <code>.md</code>).</li><li>Structured resources (<code>.json</code>, <code>.yaml</code>, <code>.yml</code>).</li><li>Jinja templates (<code>.jinja</code>, <code>.jinja2</code>, <code>.j2</code>).</li></ul>
-    <p>Python extraction recognizes multiline strings, f-string placeholders, direct prompt references, and common model-call names. Framework-specific or indirect flows may not always be resolved.</p>
+    <p>Python uses AST analysis; JavaScript and TypeScript use Tree-sitter. PHP, Java, C, C++, C#, Go, and Rust use experimental structural adapters with conservative model-call detection.</p>
     <h2 id="safety">Safety model</h2>
     <p>The scanner does not execute analyzed Python code. Analysis is local by default, and TokenOptiPy does not require an OpenAI API key or mandatory remote service. Likely credentials are redacted from short previews.</p>
     <h2 id="limitations">Current limitations</h2>

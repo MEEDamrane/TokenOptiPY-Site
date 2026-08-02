@@ -26,7 +26,7 @@ test("all requested routes exist", async () => {
 
 test("site configuration centralizes project identity", async () => {
   const config = await read("src/config/site.ts");
-  assert.match(config, /version: "0\.3\.0"/);
+  assert.match(config, /version: "0\.5\.0"/);
   assert.match(config, /MEEDamrane\/TokenOptiPy"/);
   assert.match(config, /MEEDamrane\/TokenOptiPY-Site/);
   assert.match(config, /mohamedamrane\.tokenoptipy-vscode/);
@@ -47,7 +47,7 @@ test("external URLs are centralized and links are accessible", async () => {
 
 test("product, marketplace, and website destinations remain distinct", async () => {
   const header = await read("src/components/site-header.tsx");
-  const home = await read("src/app/page.tsx");
+  const home = await read("src/components/marketing/hero.tsx");
   const footer = await read("src/components/site-footer.tsx");
   assert.match(header, /siteConfig\.productRepositoryUrl/);
   assert.match(home, /site\.productRepositoryUrl/);
@@ -57,7 +57,7 @@ test("product, marketplace, and website destinations remain distinct", async () 
   assert.doesNotMatch(home, /websiteRepositoryUrl/);
 });
 
-test("CLI examples match the v0.3.0 parser", async () => {
+test("CLI examples match the current parser", async () => {
   const config = await read("src/config/site.ts");
   assert.match(config, /tokenoptipy mcp-config --client all/);
   assert.match(config, /tokenoptipy agent-init --client all/);
@@ -110,10 +110,10 @@ test("responsive navigation and documentation menu are implemented", async () =>
   assert.match(docs, /DocsSearch/);
 });
 
-test("interactive graph nodes are keyboard-focusable buttons", async () => {
-  const graph = await read("src/components/token-graph-demo.tsx");
-  assert.match(graph, /<button/);
+test("interactive graph nodes are keyboard-focusable controls", async () => {
+  const graph = await read("src/components/marketing/token-graph-showcase.tsx");
+  assert.match(graph, /role="button"/);
   assert.match(graph, /onFocus=/);
-  assert.match(graph, /aria-pressed=/);
-  assert.match(graph, /Demo data only/);
+  assert.match(graph, /tabIndex=/);
+  assert.match(graph, /Demonstration data/);
 });

@@ -1,4 +1,4 @@
-const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://tokenoptipy.example").replace(/\/$/, "");
+const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://tokenoptipy-site.netlify.app").replace(/\/$/, "");
 export const basePath = (process.env.NEXT_PUBLIC_BASE_PATH ?? "").replace(/\/$/, "");
 const asset = (path: string) => `${basePath}${path}`;
 
@@ -14,10 +14,12 @@ export function absoluteUrl(path: string): string {
 
 export const siteConfig = {
   name: "TokenOptiPy",
-  version: "0.3.0",
+  version: "0.5.0",
   description:
-    "TokenOptiPy is an open-source local TokenGraph engine for analyzing prompt tokens, context flows, model calls and MCP-based optimization workflows.",
-  shortDescription: "Local token-flow analysis for Python LLM applications.",
+    "Build a local TokenGraph connecting prompts, context, variables and model calls. Find token hotspots and investigate safer optimization opportunities.",
+  shortDescription: "Local token-flow analysis for LLM applications.",
+  officialWebsiteDescription:
+    "The official website for TokenOptiPy — the local TokenGraph engine, CLI, MCP server and VS Code extension.",
   url: siteUrl,
   productRepositoryUrl: PRODUCT_REPOSITORY_URL,
   websiteRepositoryUrl: WEBSITE_REPOSITORY_URL,
@@ -35,7 +37,7 @@ export const siteConfig = {
     tokenGraph: "/docs/token-graph",
   },
   commands: {
-    build: "tokenoptipy build . --output tokenoptipy-out",
+    build: "tokenoptipy build . --language auto",
     hotspots: "tokenoptipy hotspots --graph tokenoptipy-out/graph.json",
     explain: "tokenoptipy explain CLASSIFY_PROMPT \\\n  --graph tokenoptipy-out/graph.json",
     path: "tokenoptipy path CLASSIFY_PROMPT conversation_history \\\n  --graph tokenoptipy-out/graph.json",
@@ -54,6 +56,6 @@ export const siteConfig = {
 } as const;
 
 
-// TODO: Replace NEXT_PUBLIC_SITE_URL before production deployment.
+// Set NEXT_PUBLIC_SITE_URL to the verified production domain before deployment.
 // TODO: Confirm the Marketplace listing is publicly available at the URL above.
-// v0.3.0 writes MCP/agent config immediately; it does not expose a --write option.
+// Keep this value synchronized with ../TokenOptiPy/pyproject.toml via `npm run sync:version`.

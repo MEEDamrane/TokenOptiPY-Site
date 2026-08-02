@@ -20,5 +20,5 @@ export default function CliPage() { return <DocPage href="/docs/cli" title="CLI 
   <p>Optimization checks can preserve configured required terms and inspect placeholders, numbers, negations, and indentation-sensitive structure. Application-level quality evaluation is still required.</p>
   <h3>Aggregate evaluation results</h3><CodeBlock code="tokenoptipy evaluate results.jsonl" />
   <h2 id="mcp">MCP and agent configuration</h2><CodeBlock code={`${site.commands.mcpConfig}\n${site.commands.agentInit}`} /><p>These commands write supported client configuration and agent instruction files into the current workspace.</p>
-  <h2 id="notes">Version 0.3.0 notes</h2><div className="note"><strong>No <code>--write</code> flag:</strong> in TokenOptiPy 0.3.0, <code>mcp-config</code> and <code>agent-init</code> write files directly. The command examples above match the current CLI parser.</div>
+  <h2 id="notes">Version {site.version} notes</h2><div className="note"><strong>Current syntax:</strong> <code>mcp-config</code> and <code>agent-init</code> write files directly. The command examples above match the current CLI parser.</div>
 </DocPage>; }

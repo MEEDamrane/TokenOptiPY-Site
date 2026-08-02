@@ -4,7 +4,7 @@
   "metadata": {
     "backend": "simple",
     "file_count": 50,
-    "project_fingerprint": "8139d7d74c7480b2ec6e3a2ae25eb87f68264132081998ebbeecc011d9e6cb4c",
+    "project_fingerprint": "e26f789ce3712bff8db916668ed9817c17e88a819a45415e9b5e0d5d1cb7e2f8",
     "parser": "Python ast + Tree-sitter JavaScript/TypeScript grammars",
     "language": [
       "auto"
@@ -338,8 +338,8 @@
       "attributes": {
         "root_file": "next.config.ts",
         "extension": ".ts",
-        "size_bytes": 381,
-        "sha256": "c57b9268afa63b091623b0f5f87fa67b15677e6f126eebf0b021372cc234e942"
+        "size_bytes": 336,
+        "sha256": "faa24e98e113e9992daa4a01291bf5c401c6d75e9edc88329ca00295b7059b9e"
       }
     },
     {
@@ -1155,8 +1155,8 @@
       "attributes": {
         "root_file": "src/app/layout.tsx",
         "extension": ".tsx",
-        "size_bytes": 3073,
-        "sha256": "ade0368ce2d32af1b8090741f7d13c83d9c07ccf1b2eb194666bfab00a786dab"
+        "size_bytes": 3043,
+        "sha256": "553218bfadb5ab559dc689e488331eb754ec39f4cd74a9d208db8135994cf758"
       }
     },
     {
@@ -2690,8 +2690,8 @@
       "attributes": {
         "root_file": "src/components/marketing/sections.tsx",
         "extension": ".tsx",
-        "size_bytes": 6188,
-        "sha256": "a716409302ad161007d62ceb67fc362c30d527529fd67228690adbfb6de10ac5"
+        "size_bytes": 6175,
+        "sha256": "173d02b0ea5b37a8f2146da329183268beb6fe25108adb2939d23bfb6bcafe68"
       }
     },
     {

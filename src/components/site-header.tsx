@@ -7,7 +7,7 @@ import { Logo } from "@/components/logo";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { siteConfig } from "@/config/site";
 
-const nav = [{ label:"Product",href:"/#product"},{label:"TokenGraph",href:siteConfig.docs.tokenGraph},{label:"MCP",href:siteConfig.docs.mcp},{label:"VS Code",href:siteConfig.docs.vscode},{label:"Docs",href:siteConfig.docs.home},{label:"Roadmap",href:"/roadmap"}];
+const nav = [{label:"Product",href:"/#product"},{label:"How it works",href:"/#how-it-works"},{label:"TokenGraph",href:"/#token-graph"},{label:"MCP",href:"/#mcp"},{label:"Docs",href:siteConfig.docs.home},{label:"Security",href:"/#security"}];
 export function SiteHeader() {
  const [scrolled,setScrolled]=useState(false);
  useEffect(()=>{const update=()=>setScrolled(scrollY>12);update();addEventListener("scroll",update,{passive:true});return()=>removeEventListener("scroll",update)},[]);

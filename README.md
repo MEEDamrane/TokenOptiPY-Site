@@ -1,6 +1,6 @@
 # TokenOptiPy website
 
-Official-style, static-exportable website for [TokenOptiPy](https://github.com/MEEDamrane/TokenOptiPy), built from the confirmed repository behavior of version 0.3.0.
+Static-exportable website for [TokenOptiPy](https://github.com/MEEDamrane/TokenOptiPy), synchronized with confirmed core version 0.5.0 behavior.
 
 ## Stack
 
@@ -23,7 +23,7 @@ Official-style, static-exportable website for [TokenOptiPy](https://github.com/M
 - `/docs/token-graph` — nodes, relations, findings, estimates, and queries
 - `/privacy` — privacy and security model
 - `/roadmap` — available capabilities and cautious exploration areas
-- `/changelog` — current 0.3.0 capability summary
+- `/changelog` — current 0.5.0 capability summary
 - custom 404 page
 
 ## Local development
@@ -59,7 +59,7 @@ Edit `src/config/site.ts` to update:
 - documentation links;
 - install and CLI commands.
 
-The current CLI examples intentionally do **not** include `--write`: TokenOptiPy 0.3.0 writes MCP configuration and agent instruction files directly, and its parser does not expose that flag.
+Run `npm run sync:version` to read `../TokenOptiPy/pyproject.toml` and update the centralized website version. Pass another core path after `--` when the repositories are not siblings.
 
 ## Logo and social assets
 
