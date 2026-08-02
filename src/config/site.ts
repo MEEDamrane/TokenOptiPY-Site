@@ -47,6 +47,7 @@ export const siteConfig = {
   social: [] as Array<{ label: string; href: string }>,
   assets: {
     logo: asset("/tokenoptipy-icon.png"),
+    wordmark: asset("/optipy-wordmark.png"),
     ogImage: asset("/og-image.png"),
     appleTouchIcon: asset("/apple-touch-icon.png"),
     favicon: asset("/favicon.ico"),
